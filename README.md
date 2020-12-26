@@ -30,3 +30,4 @@ Kaggle/MNIST using CNN
     - CNN1a で epochs=6 にした
   - Results
     - 0.98625 (残念)
+    - Saved as Ver.8 on Kaggle
