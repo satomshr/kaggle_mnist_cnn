@@ -6,8 +6,10 @@ Kaggle/MNIST using CNN
     - digit_recognizer_CNN1a.csv
     - digit-recognition_CNN1a.ipynb
     - digit-recognition_CNN1a.py
+    - prediction_CNN1a.csv ; results of prediction (prediction and probability)
   - Summary
     - TensorFlow の tutorial (https://www.tensorflow.org/tutorials/images/cnn) をそのまま実装
+    - epochs=5
   - Results
     - 0.98792 (Best!)
 
