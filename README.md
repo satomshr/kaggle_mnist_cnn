@@ -11,6 +11,33 @@ Kaggle/MNIST using CNN
   - Summary
     - TensorFlow の tutorial (https://www.tensorflow.org/tutorials/images/cnn) をそのまま実装
     - epochs=5
+  - Model Summary
+```  
+Model: "sequential"
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #   
+=================================================================
+conv2d (Conv2D)              (None, 26, 26, 32)        320       
+_________________________________________________________________
+max_pooling2d (MaxPooling2D) (None, 13, 13, 32)        0         
+_________________________________________________________________
+conv2d_1 (Conv2D)            (None, 11, 11, 64)        18496     
+_________________________________________________________________
+max_pooling2d_1 (MaxPooling2 (None, 5, 5, 64)          0         
+_________________________________________________________________
+conv2d_2 (Conv2D)            (None, 3, 3, 64)          36928     
+_________________________________________________________________
+flatten (Flatten)            (None, 576)               0         
+_________________________________________________________________
+dense (Dense)                (None, 64)                36928     
+_________________________________________________________________
+dense_1 (Dense)              (None, 10)                650       
+=================================================================
+Total params: 93,322
+Trainable params: 93,322
+Non-trainable params: 0
+_________________________________________________________________
+```
   - Results
     - 0.98792 (Best!)
 
@@ -35,6 +62,34 @@ Kaggle/MNIST using CNN
     - 0.98625 (残念)
     - Saved as Ver.8 on Kaggle
 
+- CNN1e
+  - Files
+    - digit_recognition_CNN1e.ipynb
+    - digit_recognition_CNN1e.py
+    - train_CNN1e.txt ; results of train
+      - epochs = 5 くらいで saturate している
+      - val_accuracy が一番大きいのは epochs = 14
+    - train_CNN1e.png ; graph of above
+    - digit-recognition_CNN1e.ipynb
+    - digit-recognition_CNN1e.py
+    - digit_recognition_CNN1e_epochs06.csv ; epochs = 6
+    - prediction_CNN1e_epochs06.csv
+    - digit_recognition_CNN1e_epochs14.csv ; epochs = 14
+    - prediction_CNN1e_epochs14.csv
+  - Summary
+    - CNN1a で，最初の kernel_size を (3,3) から (5,5) に変更した
+    - 理由は，太い数字に対する認識を強化するために，フィルタのサイズを大きくした
+  - Results
+    - epochs=6 ; 0.98653
+    - epochs=14 ; 0.99035 (更新!! 762/2105 = 0.362)
+    - Saved as Ver.9 on Kaggle (epochs=14)
+
+- CNN2a
+  - Files
+  - Summary
+    - LeNet-5 をトライ
+    - http://datahacker.rs/lenet-5-implementation-tensorflow-2-0/
+    - https://ohke.hateblo.jp/entry/2019/03/16/143000
+
 - misc
   - check_prediction1.py ; chech prediction and see images
-  
