@@ -7,6 +7,7 @@ Kaggle/MNIST using CNN
     - digit-recognition_CNN1a.ipynb
     - digit-recognition_CNN1a.py
     - prediction_CNN1a.csv ; results of prediction (prediction and probability)
+    - mismatched_CNN1a.png
   - Summary
     - TensorFlow の tutorial (https://www.tensorflow.org/tutorials/images/cnn) をそのまま実装
     - epochs=5
@@ -33,3 +34,7 @@ Kaggle/MNIST using CNN
   - Results
     - 0.98625 (残念)
     - Saved as Ver.8 on Kaggle
+
+- misc
+  - check_prediction1.py ; chech prediction and see images
+  
