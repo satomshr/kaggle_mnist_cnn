@@ -84,6 +84,9 @@ _________________________________________________________________
     - epochs=14 ; 0.99035 (更新!! 762/2105 = 0.362)
     - Saved as Ver.9 on Kaggle (epochs=14)
 
+- CNN1f
+  - See [CNN1f/Readme.md](./CNN1f/Readme.md)
+
 - CNN2a
   - Files
   - Summary
