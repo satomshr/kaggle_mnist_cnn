@@ -87,6 +87,9 @@ _________________________________________________________________
 - CNN1f
   - See [CNN1f/Readme.md](./CNN1f/Readme.md)
 
+- CNN1g
+  - See [CNN1g/Readme.md](./CNN1g/Readme.md)
+
 - CNN2a
   - Files
   - Summary
