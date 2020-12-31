@@ -87,22 +87,30 @@ _________________________________________________________________
 - CNN1f
   - See [CNN1f/Readme.md](./CNN1f/Readme.md)
   - CNN1e で，チャンネル数を増やした
+  - epochs = 22 ; 0.99050 (Best! 770/2158 = 0.3568)
 
 - CNN1g
   - See [CNN1g/Readme.md](./CNN1g/Readme.md)
   - CNN1f で，ImageDataGenerator を使って画像を変形させた
+  - epochs = 30 ; 0.99228 (570 / 2182 = 0.2612)
 
 - CNN1h
   - See [CNN1h/Readme.md](./CNN1h/Readme.md)
   - X_cv を random_transform した
   - ImageDataGenerator の変形範囲を増やした
   - 試しに Dropout を入れてみた
-  - 更新できず
+  - スコアは更新できず
+  - epochs = 35 ; 0.99157
 
 - CNN1i
   - See [CNN1i/Readme.md](./CNN1i/Readme.md)
   - チャンネル数を増やした
-  - 更新できず
+  - スコアは更新できず
+  - epochs = 30 ; 0.99185 (not good)
+
+- CNN1j
+  - See [CNN1j/Readme.md](./CNN1j/Readme.md)
+  - ImageDataGenerator で毎回変形させずに，事前に変形させた画像で学習する
 
 - CNN2a
   - Files
@@ -113,3 +121,4 @@ _________________________________________________________________
 
 - misc
   - check_prediction1.py ; chech prediction and see images
+  - show_history.py ; create graph of history (accracy, val_accuracy, loss, val_loss)
