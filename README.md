@@ -86,9 +86,17 @@ _________________________________________________________________
 
 - CNN1f
   - See [CNN1f/Readme.md](./CNN1f/Readme.md)
+  - CNN1e で，チャンネル数を増やした
 
 - CNN1g
   - See [CNN1g/Readme.md](./CNN1g/Readme.md)
+  - CNN1f で，ImageDataGenerator を使って画像を変形させた
+
+- CNN1h
+  - See [CNN1h/Readme.md](./CNN1h/Readme.md)
+  - X_cv を random_transform した
+  - ImageDataGenerator の変形範囲を増やした
+  - 試しに Dropout を入れてみた
 
 - CNN2a
   - Files
