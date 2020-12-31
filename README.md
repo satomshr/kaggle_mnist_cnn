@@ -97,6 +97,12 @@ _________________________________________________________________
   - X_cv を random_transform した
   - ImageDataGenerator の変形範囲を増やした
   - 試しに Dropout を入れてみた
+  - 更新できず
+
+- CNN1i
+  - See [CNN1i/Readme.md](./CNN1i/Readme.md)
+  - チャンネル数を増やした
+  - 更新できず
 
 - CNN2a
   - Files
