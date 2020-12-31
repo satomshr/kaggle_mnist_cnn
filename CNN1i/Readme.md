@@ -7,6 +7,7 @@
 - Files ; saved as ver.12 on kaggle
 
 - Results
+  - epochs = 24 ; 0.99025
   - epochs = 30 ; 0.99185 (not good)
   - epochs = 85 ; 0.99178
 
