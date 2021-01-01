@@ -54,7 +54,6 @@ epochs are set to 100.
 
 ## Files
 
-
 ## Graphs
 ### 00 ; standard
 ![graphs of accuracy and loss](./00/CNN1l_00.svg)
@@ -72,3 +71,4 @@ epochs are set to 100.
 
 ## 03 ; Learning Rate reducing + Dropout
 ![graphs of accuracy and loss](./03/CNN1l_03.svg)
+- val_loss is smaller than that of 01.
