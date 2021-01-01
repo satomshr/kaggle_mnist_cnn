@@ -22,6 +22,7 @@
 | 02  | 32 | default  | Yes| No | 0.03156 (epochs=39) | 0.99369 (epochs=39) |
 | 03  | 32 | default  | No | Yes (0.4) | 0.03247 (epochs=38) | 0.99167 (epochs=44) |
 | 04 | 1024| default  | No | No |0.03475 (epochs=45)|0.98977 (epochs=45)|
+| 05 | 32 |  Reducing | No | No | 0.02909 (epochs=28) | 0.99417 (epochs=58) |
 
 ### 00 ; standard
  default condition as of CNN1g
@@ -44,6 +45,16 @@
 
 ### 04 ; Batch size 32 -> 1024
  batch_size is changed. Size of train_data is changed from 33600 (=42000 \* 0.8) to 33792 (= 1024 \* 33).
+
+ ### 05 ; learning rate reducing (again)
+  ```keras.callbacks.ReduceLROnPlateau``` is used to reduce learning rate. Parameters are as follow.
+
+  - monitor='val_loss'
+  - factor=0.47
+  - patience=5
+  - min_lr=0.00001
+
+  Initial learning rate of Adam optimizer is 0.001. So learning rate will change 0.001 -> 0.00047 -> 0.0002209 -> 0.000103823 -> 0.00004879681 -> 0.0000229345007 -> 0.00001077921532 .
 
 ## Graphs
 ### 00 ; standard
@@ -68,3 +79,6 @@
 ![graphs of accuracy and loss](./04/CNN1k_04.svg)
 
 - Worse than 00, but seemed that training was not finished. More epochs will be needed (?)
+
+### 05 ; learning rate reducing (again)
+![graphs of accuracy and loss](./05/CNN1k_05.svg)
