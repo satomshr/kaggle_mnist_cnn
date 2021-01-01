@@ -55,7 +55,7 @@ epochs are set to 100.
 - According to train data, accuracy is higher and loss is lower than CNN1h/00.
 - "val_accuracy" and "val_loss" are not stable. The values of them are similar to those of CNN1h/00.
 
-### 01 ; standard
+### 01 ; Learning Rate reducing
 ![graphs of accuracy and loss](./01/CNN1l_01.svg)
 - It seems learning rate under 10^-4 does not work. In the begining, it might be larger learning rate is preferable (?)
 - For the stable reduction of loss or val_loss, BatchNormalization may be work well.
