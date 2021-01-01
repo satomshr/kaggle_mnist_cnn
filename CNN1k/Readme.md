@@ -1,0 +1,66 @@
+# CNN1k/Readme.md
+
+## Summary
+- Check accuracy and loss on each condition
+- Scripts are based on CNN1g, which means
+  - train data are generated in each epoch using ImageDataGenerator
+  - test data are same in each epoch, made by sklearn.model_selection.train_data_split()
+  - Parameters of ImageDataGenerator parameters are
+    - rotation_range=30,
+    - width_shift_range=0.20,
+    - height_shift_range=0.20,
+    - shear_range=0.2,
+    - zoom_range=0.2,
+    - fill_mode='nearest'
+
+## Data description
+
+| dir | batch_size | Lr | BatchNomalization | Dropout | Min of val_loss | Max of val_accuracy |
+| --- | --:        |--: | ---               | --- | --: | --: |
+| 00  | 32 | default  | No | No | 0.03139 (epochs=14) | 0.99214 (epochs=33) |
+| 01  | 32 | Reducing | No | No | 0.02601 (epochs=32) | 0.99452 (epochs=33) |
+| 02  | 32 | default  | Yes| No | 0.03156 (epochs=39) | 0.99369 (epochs=39) |
+| 03  | 32 | default  | No | Yes (0.4) | 0.03247 (epochs=38) | 0.99167 (epochs=44) |
+
+
+
+### 00
+ default condition as of CNN1g
+
+### 01
+ ```keras.callbacks.ReduceLROnPlateau``` is used to reduce learning rate. Parameters are as follow.
+
+ - monitor='val_loss'
+ - factor=0.47
+ - patience=5
+ - min_lr=0.0001
+
+ Initial learning rate of Adam optimizer is 0.001. So learning rate will change 0.001 -> 0.00047 -> 0.0002209 -> 0.000103823 .
+
+### 02
+ Based on "00", BatchNormalization is added after Conv2D.
+
+### 03
+ Based on "00", Dropout(0.4) is added after Conv2D
+
+### 04
+ batch_size is changed. Size of train_data is changed to 33792 (= 1024*33). In other trial, size of train_data is 33600 (=42000*0.8).
+
+## Graphs
+### 00
+![graphs of accuracy and loss](./00/CNN1k_00.svg)
+
+### 01
+![graphs of accuracy and loss](./01/CNN1k_01.svg)
+
+- When learning rate get smaller, val_accuracy raises and val_loss slightly reduces.
+
+### 02
+![graphs of accuracy and loss](./02/CNN1k_02.svg)
+
+- Almost same as "00", not better than "01"
+
+### 03
+![graphs of accuracy and loss](./03/CNN1k_03.svg)
+
+- Not so good
