@@ -11,7 +11,8 @@
 
 | No | batch_size | Lr | BatchNomalization | Dropout | Min of val_loss | Max of val_accuracy | Score |
 | :-: | :-:        |:-: | :-:               | :-: | :-: | :-: |:-:|
-| 00  | 32 | default  | No | No | 0.03399 (epochs=20) | 0.99298 (epochs=34) | |
+| 00  | 32 | default  | No | No | 0.03399 (epochs=20) | 0.99298 (epochs=34) | 0.99092 (epochs=20)|
+| 01  | 32 | default  | No | No | 0.02485 (epochs=47) | 0.99417 (epochs=47) | 0.99389 (epochs=47)|
 
 ### 00 ; standard condition
 Standard condition of CNN1l.
@@ -31,6 +32,8 @@ epochs are set to 100.
 
 
 ## Results of score
+- 00, epochs=20 ; 0.99092
+- 01, epochs=47 ; 0.99389
 
 ## Files
 
