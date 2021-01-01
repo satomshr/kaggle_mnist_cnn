@@ -82,3 +82,5 @@
 
 ### 05 ; learning rate reducing (again)
 ![graphs of accuracy and loss](./05/CNN1k_05.svg)
+
+- After epochs=40, val_loss seeds unchanged.
