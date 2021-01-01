@@ -112,6 +112,10 @@ _________________________________________________________________
   - See [CNN1j/Readme.md](./CNN1j/Readme.md)
   - ImageDataGenerator で毎回変形させずに，事前に変形させた画像で学習する
 
+- CNN1k
+  - See [CNN1k/Readme.md](./CNN1k/Readme.md)
+  - check accuracy and loss on each conditions
+
 - CNN2a
   - Files
   - Summary
