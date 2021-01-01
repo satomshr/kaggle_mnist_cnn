@@ -116,6 +116,10 @@ _________________________________________________________________
   - See [CNN1k/Readme.md](./CNN1k/Readme.md)
   - check accuracy and loss on each conditions
 
+- CNN1l
+  - See [CNN1l/Readme.md](./CNN1l/Readme.md)
+  - In order to increase parameters, the 1st Conv2D is changed ((5,5) -> (7,7))
+
 - CNN2a
   - Files
   - Summary
