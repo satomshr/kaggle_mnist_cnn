@@ -63,4 +63,4 @@
 ### 03 ; Dropout
 ![graphs of accuracy and loss](./03/CNN1k_03.svg)
 
-- Slightly better than 00 (?)
+- Slightly better than 00 (?). Seemed not saturated. More epochs will be needed (?)
