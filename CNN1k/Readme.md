@@ -16,7 +16,7 @@
 ## Data description
 
 | dir | batch_size | Lr | BatchNomalization | Dropout | Min of val_loss | Max of val_accuracy |
-| --- | --:        |--: | ---               | --- | --: | --: |
+| :-: | :-:        |:-: | :-:               | :-: | --: | --: |
 | 00  | 32 | default  | No | No | 0.03139 (epochs=14) | 0.99214 (epochs=33) |
 | 01  | 32 | Reducing | No | No | 0.02601 (epochs=32) | 0.99452 (epochs=33) |
 | 02  | 32 | default  | Yes| No | 0.03156 (epochs=39) | 0.99369 (epochs=39) |
