@@ -24,10 +24,10 @@
 
 
 
-### 00
+### 00 ; standard
  default condition as of CNN1g
 
-### 01
+### 01 ; learning rate reducing
  ```keras.callbacks.ReduceLROnPlateau``` is used to reduce learning rate. Parameters are as follow.
 
  - monitor='val_loss'
@@ -37,30 +37,30 @@
 
  Initial learning rate of Adam optimizer is 0.001. So learning rate will change 0.001 -> 0.00047 -> 0.0002209 -> 0.000103823 .
 
-### 02
+### 02 ; BatchNormalization
  Based on "00", BatchNormalization is added after Conv2D.
 
-### 03
+### 03 ; Dropout
  Based on "00", Dropout(0.4) is added after Conv2D
 
-### 04
+### 04 ; Batch size 32 -> 1024
  batch_size is changed. Size of train_data is changed to 33792 (= 1024*33). In other trial, size of train_data is 33600 (=42000*0.8).
 
 ## Graphs
-### 00
+### 00 ; standard
 ![graphs of accuracy and loss](./00/CNN1k_00.svg)
 
-### 01
+### 01 ; learning rate reducing
 ![graphs of accuracy and loss](./01/CNN1k_01.svg)
 
 - When learning rate get smaller, val_accuracy raises and val_loss slightly reduces.
 
-### 02
+### 02 ; BatchNormalization
 ![graphs of accuracy and loss](./02/CNN1k_02.svg)
 
 - Almost same as "00", not better than "01"
 
-### 03
+### 03 ; Dropout
 ![graphs of accuracy and loss](./03/CNN1k_03.svg)
 
-- Not so good
+- Slightly better than 00 (?)
