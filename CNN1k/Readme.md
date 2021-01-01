@@ -21,8 +21,7 @@
 | 01  | 32 | Reducing | No | No | 0.02601 (epochs=32) | 0.99452 (epochs=33) |
 | 02  | 32 | default  | Yes| No | 0.03156 (epochs=39) | 0.99369 (epochs=39) |
 | 03  | 32 | default  | No | Yes (0.4) | 0.03247 (epochs=38) | 0.99167 (epochs=44) |
-
-
+| 04 | 1024| default  | No | No |0.03475 (epochs=45)|0.98977 (epochs=45)|
 
 ### 00 ; standard
  default condition as of CNN1g
@@ -63,4 +62,9 @@
 ### 03 ; Dropout
 ![graphs of accuracy and loss](./03/CNN1k_03.svg)
 
-- Slightly better than 00 (?). Seemed not saturated. More epochs will be needed (?)
+- Slightly better than 00 (?). Seemed that training was not finished. More epochs will be needed (?)
+
+### 04 ; Batch size 32 -> 1024
+![graphs of accuracy and loss](./04/CNN1k_04.svg)
+
+- Worse than 00, but seemed that training was not finished. More epochs will be needed (?)
