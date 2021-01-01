@@ -14,6 +14,8 @@
 | 00  | 32 | default  | No | No | 0.03399 (epochs=20) | 0.99298 (epochs=34) | 0.99092 (epochs=20)|
 | 01  | 32 | reducing  | No | No | 0.02485 (epochs=47) | 0.99417 (epochs=47) | 0.99389 (epochs=47)|
 | 02  | 32 | reducing (initial=0.004257)| No | No | 0.04623 (epochs=68) | 0.98798 (epochs=68) | |
+| 03  | 32 | reducing | No | Yes (0.4) | 0.02212 (epochs=79)| 0.99476 (epochs=75) | |
+
 
 ### 00 ; standard condition
 Standard condition of CNN1l.
@@ -30,7 +32,7 @@ Initial learning rate of Adam optimizer is 0.001. So learning rate will change 0
 
 epochs are set to 100.
 
-## 02 ; Learning Rate reducing (2)
+### 02 ; Learning Rate reducing (2)
 - Initial learning rate ; 0.004257 (larger than default)
 - Learning rate will change 0.004257 -> 0.0020 -> 0.00094 -> 0.00044 -> 0.00020 -> 0.000098 -> 0.000005
 
@@ -40,6 +42,10 @@ epochs are set to 100.
   - patience=5,
   - min_lr=0.00005,
   - verbose=1
+
+### 03 ; Learning Rate reducing + Dropout
+- Based on 01 (Learning Rate reducing starting lr=0.001 (default))
+- Set Dropout(0.4) after every Conv2D
 
 
 ## Results of score
@@ -63,3 +69,6 @@ epochs are set to 100.
 ## 02 ; Learning Rate reducing (2)
 ![graphs of accuracy and loss](./02/CNN1l_02.svg)
 - Bad (accuracy is low and loss is high.)
+
+## 03 ; Learning Rate reducing + Dropout
+![graphs of accuracy and loss](./03/CNN1l_03.svg)
