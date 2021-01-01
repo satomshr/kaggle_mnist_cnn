@@ -1,0 +1,42 @@
+# CNN1l/Readme.md
+
+## Summary
+- Strategy ; get higher accuracy and lower loss by increasing parameters of neural network
+- Based on CNN1k
+- In order to increase parameters, 1st Conv2D is changed as follows;
+  - Before ; model.add(layers.Conv2D(64, (5, 5), activation='relu', input_shape=(28, 28, 1)))
+  - After ; model.add(layers.Conv2D(64, (7, 7), activation='relu', padding='same', input_shape=(28, 28, 1)))
+
+## Training conditions and Results of score
+
+| No | batch_size | Lr | BatchNomalization | Dropout | Min of val_loss | Max of val_accuracy | Score |
+| :-: | :-:        |:-: | :-:               | :-: | :-: | :-: |:-:|
+| 00  | 32 | default  | No | No | 0.03399 (epochs=20) | 0.99298 (epochs=34) | |
+
+### 00 ; standard condition
+Standard condition of CNN1l.
+
+### 01 ; Learning Rate reducing
+```keras.callbacks.ReduceLROnPlateau``` is used to reduce learning rate. Parameters are as follow.
+
+- monitor='val_loss'
+- factor=0.47
+- patience=5
+- min_lr=0.00001
+
+Initial learning rate of Adam optimizer is 0.001. So learning rate will change 0.001 -> 0.00047 -> 0.0002209 -> 0.000103823 -> 0.00004879681 -> 0.0000229345007 -> 0.00001077921532 .
+
+epochs are set to 100.
+
+
+
+## Results of score
+
+## Files
+
+
+## Graphs
+### 00 ; standard
+![graphs of accuracy and loss](./00/CNN1k_00.svg)
+- According to train data, accuracy is higher and loss is lower than CNN1h/00.
+- "val_accuracy" and "val_loss" are not stable. The values of them are similar to those of CNN1h/00.
