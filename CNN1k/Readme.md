@@ -44,7 +44,7 @@
  Based on "00", Dropout(0.4) is added after Conv2D
 
 ### 04 ; Batch size 32 -> 1024
- batch_size is changed. Size of train_data is changed to 33792 (= 1024\*33). In other trial, size of train_data is 33600 (=42000\*0.8).
+ batch_size is changed. Size of train_data is changed from 33600 (=42000 \* 0.8) to 33792 (= 1024 \ *33).
 
 ## Graphs
 ### 00 ; standard
