@@ -63,6 +63,7 @@
 
 ## Files
 - Condition of 01 is saved as Ver.13 on Kaggle.
+- digit-recognition_CNN1k_01.py ; Python script of Ver.13
 
 ## Graphs
 ### 00 ; standard
