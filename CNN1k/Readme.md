@@ -3,9 +3,9 @@
 ## Summary
 - Check accuracy and loss on each condition
 - Scripts are based on CNN1g, which means
-  - train data are generated in each epoch using ImageDataGenerator
-  - test data are same in each epoch, made by sklearn.model_selection.train_data_split()
-  - Parameters of ImageDataGenerator parameters are
+  - train data are generated in each epoch using ```keras.preprocessing.image.ImageDataGenerator()```
+  - test data are same in each epoch, made by ```sklearn.model_selection.train_data_split()```
+  - Parameters of ```ImageDataGenerator()``` parameters are as follows;
     - rotation_range=30,
     - width_shift_range=0.20,
     - height_shift_range=0.20,
