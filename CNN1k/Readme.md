@@ -13,16 +13,18 @@
     - zoom_range=0.2,
     - fill_mode='nearest'
 
+
+
 ## Data description
 
-| dir | batch_size | Lr | BatchNomalization | Dropout | Min of val_loss | Max of val_accuracy |
-| :-: | :-:        |:-: | :-:               | :-: | --: | --: |
-| 00  | 32 | default  | No | No | 0.03139 (epochs=14) | 0.99214 (epochs=33) |
-| 01  | 32 | Reducing | No | No | 0.02601 (epochs=32) | 0.99452 (epochs=33) |
-| 02  | 32 | default  | Yes| No | 0.03156 (epochs=39) | 0.99369 (epochs=39) |
-| 03  | 32 | default  | No | Yes (0.4) | 0.03247 (epochs=38) | 0.99167 (epochs=44) |
-| 04 | 1024| default  | No | No |0.03475 (epochs=45)|0.98977 (epochs=45)|
-| 05 | 32 |  Reducing | No | No | 0.02909 (epochs=28) | 0.99417 (epochs=58) |
+| dir | batch_size | Lr | BatchNomalization | Dropout | Min of val_loss | Max of val_accuracy | Score |
+| :-: | :-:        |:-: | :-:               | :-: | :-: | :-: |:-:|
+| 00  | 32 | default  | No | No | 0.03139 (epochs=14) | 0.99214 (epochs=33) | |
+| 01  | 32 | ***Reducing*** | No | No | 0.02601 (epochs=32) | 0.99452 (epochs=33) | 0.99435 (epochs=32) |
+| 02  | 32 | default  | ***Yes***| No | 0.03156 (epochs=39) | 0.99369 (epochs=39) |0.99235 (epochs=39)|
+| 03  | 32 | default  | No | ***Yes (0.4)*** | 0.03247 (epochs=38) | 0.99167 (epochs=44) | |
+| 04 | ***1024***| default  | No | No |0.03475 (epochs=45)|0.98977 (epochs=45)||
+| 05 | 32 |  ***Reducing*** | No | No | 0.02909 (epochs=28) | 0.99417 (epochs=58) |0.99382 (epochs=28)|
 
 ### 00 ; standard
  default condition as of CNN1g
@@ -55,6 +57,11 @@
   - min_lr=0.00001
 
   Initial learning rate of Adam optimizer is 0.001. So learning rate will change 0.001 -> 0.00047 -> 0.0002209 -> 0.000103823 -> 0.00004879681 -> 0.0000229345007 -> 0.00001077921532 .
+
+## Results
+- 01, epochs=32 ; 0.99435 (331/2294 = 0.144)
+- 02, epochs=39 ; 0.99235
+- 05, epochs=28 ; 0.99382
 
 ## Graphs
 ### 00 ; standard
