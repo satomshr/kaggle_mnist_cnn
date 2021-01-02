@@ -16,7 +16,7 @@
 | 02  | 32 | reducing (initial=0.004257)| No | No | 0.04623 (epochs=68) | 0.98798 (epochs=68) | |
 | 03  | 32 | reducing | No | Yes (0.4) | 0.02212 (epochs=79)| 0.99476 (epochs=75) | ***0.99450*** (epochs=63)|
 | 04  | 32 | reducing | No | Yes (0.4) | 0.02218 (epochs=55)| 0.99452 (epochs=73) | 0.99407 (epochs=55)|
-
+| 05  | 32 | reducing | No | Yes (0.7) | 0.10244 (epochs=62)| 0.99167 (epochs=33) | |
 
 ### 00 ; standard condition
 Standard condition of CNN1l.
@@ -54,6 +54,9 @@ epochs are set to 100.
   - Before ; model.add(layers.Conv2D(128, (3, 3), activation='relu'))
   - After  ; model.add(layers.Conv2D(128, (5, 5), activation='relu'))
 
+### 05 ; Learning Rate reducing + Dropout
+- Based on 03, set Dropout(0.7) instead of Dropout(0.4)
+
 ## Results of score
 - 00, epochs=20 ; 0.99092
 - 01, epochs=47 ; 0.99389
@@ -82,7 +85,7 @@ epochs are set to 100.
 ![graphs of accuracy and loss](./02/CNN1l_02.svg)
 - Bad (accuracy is low and loss is high.)
 
-## 03 ; Learning Rate reducing + Dropout
+## 03 ; Learning Rate reducing + Dropout(0.5)
 ![graphs of accuracy and loss](./03/CNN1l_03.svg)
 - val_loss is smaller than that of 01.
 
@@ -91,3 +94,8 @@ epochs are set to 100.
 - accuracy is getting higher and loss is getting lower, which agrees with the increase of parameter.
 - It's better to try "grid search" to find appropriate parameters, isn't it? Or, try same cases with more parameters.
 - There are more parameters in this case than that of previous one, so the rate of Dropout should be higher(?)
+
+### 05 ; Learning Rate reducing + Dropout(0.7)
+![graphs of accuracy and loss](./05/CNN1l_05.svg)
+
+- Bad (accuracy is low and loss is high.)
