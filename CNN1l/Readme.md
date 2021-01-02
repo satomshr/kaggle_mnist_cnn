@@ -53,7 +53,7 @@ epochs are set to 100.
 - 01, epochs=47 ; 0.99389
 - 03
   - epochs=79 ; 0.99392
-  - epochs=63 ; 0.99450
+  - epochs=63 ; 0.99450 (316 / 2326 = 0.1358)
   - epochs=50 ; 0.99410
   - epochs=43 ; 0.99392
 
