@@ -17,6 +17,8 @@
 | 03  | 32 | reducing | No | Yes (0.4) | 0.02212 (epochs=79)| 0.99476 (epochs=75) | ***0.99450*** (epochs=63)|
 | 04  | 32 | reducing | No | Yes (0.4) | 0.02218 (epochs=55)| 0.99452 (epochs=73) | 0.99407 (epochs=55)|
 | 05  | 32 | reducing | No | Yes (0.7) | 0.10244 (epochs=62)| 0.99167 (epochs=33) | |
+| 06  | 32 | reducing | No | Yes (0.4) | 0.02138 (epochs=65)| 0.99512 (epochs=68) | |
+
 
 ### 00 ; standard condition
 Standard condition of CNN1l.
@@ -57,6 +59,49 @@ epochs are set to 100.
 ### 05 ; Learning Rate reducing + Dropout
 - Based on 03, set Dropout(0.7) instead of Dropout(0.4)
 
+### 06 ; Learning Rate reducing + Dropout + dobble channels of Conv2D
+- Based on 03, channels of Conv2D are doubled
+#### Before
+```
+Layer (type)                 Output Shape              Param #   
+=================================================================
+conv2d (Conv2D)              (None, 28, 28, 64)        3200      
+_________________________________________________________________
+dropout (Dropout)            (None, 28, 28, 64)        0         
+_________________________________________________________________
+max_pooling2d (MaxPooling2D) (None, 14, 14, 64)        0         
+_________________________________________________________________
+conv2d_1 (Conv2D)            (None, 12, 12, 128)       73856     
+_________________________________________________________________
+dropout_1 (Dropout)          (None, 12, 12, 128)       0         
+_________________________________________________________________
+max_pooling2d_1 (MaxPooling2 (None, 6, 6, 128)         0         
+_________________________________________________________________
+conv2d_2 (Conv2D)            (None, 4, 4, 128)         147584    
+_________________________________________________________________
+dropout_2 (Dropout)          (None, 4, 4, 128)         0         
+```
+#### After
+```
+Layer (type)                 Output Shape              Param #   
+=================================================================
+conv2d (Conv2D)              (None, 28, 28, 128)       6400      
+_________________________________________________________________
+dropout (Dropout)            (None, 28, 28, 128)       0         
+_________________________________________________________________
+max_pooling2d (MaxPooling2D) (None, 14, 14, 128)       0         
+_________________________________________________________________
+conv2d_1 (Conv2D)            (None, 12, 12, 256)       295168    
+_________________________________________________________________
+dropout_1 (Dropout)          (None, 12, 12, 256)       0         
+_________________________________________________________________
+max_pooling2d_1 (MaxPooling2 (None, 6, 6, 256)         0         
+_________________________________________________________________
+conv2d_2 (Conv2D)            (None, 4, 4, 256)         590080    
+_________________________________________________________________
+dropout_2 (Dropout)          (None, 4, 4, 256)         0         
+```
+
 ## Results of score
 - 00, epochs=20 ; 0.99092
 - 01, epochs=47 ; 0.99389
@@ -81,11 +126,11 @@ epochs are set to 100.
 - It seems learning rate under 10^-4 does not work. In the begining, it might be larger learning rate is preferable (?)
 - For the stable reduction of loss or val_loss, BatchNormalization may be work well.
 
-## 02 ; Learning Rate reducing (2)
+### 02 ; Learning Rate reducing (2)
 ![graphs of accuracy and loss](./02/CNN1l_02.svg)
 - Bad (accuracy is low and loss is high.)
 
-## 03 ; Learning Rate reducing + Dropout(0.5)
+### 03 ; Learning Rate reducing + Dropout(0.4)
 ![graphs of accuracy and loss](./03/CNN1l_03.svg)
 - val_loss is smaller than that of 01.
 
@@ -99,3 +144,6 @@ epochs are set to 100.
 ![graphs of accuracy and loss](./05/CNN1l_05.svg)
 
 - Bad (accuracy is low and loss is high.)
+
+### 06 ; earning Rate reducing + Dropout + dobble channels of Conv2D
+![graphs of accuracy and loss](./06/CNN1l_06.svg)
