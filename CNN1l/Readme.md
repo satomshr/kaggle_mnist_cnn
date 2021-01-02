@@ -88,3 +88,6 @@ epochs are set to 100.
 
 ### 04 ; Changing 2nd Conv2D layer
 ![graphs of accuracy and loss](./04/CNN1l_04.svg)
+- accuracy is getting higher and loss is getting lower, which agrees with the increase of parameter.
+- It's better to try "grid search" to find appropriate parameters, isn't it? Or, try same cases with more parameters.
+- There are more parameters in this case than that of previous one, so the rate of Dropout should be higher(?)
