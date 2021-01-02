@@ -47,6 +47,11 @@ epochs are set to 100.
 - Based on 01 (Learning Rate reducing starting lr=0.001 (default))
 - Set Dropout(0.4) after every Conv2D
 
+### 04 ; Changing 2nd Conv2D layer
+- Based on 03
+- 2nd Conv2D layer
+  - Before ; model.add(layers.Conv2D(128, (3, 3), activation='relu'))
+  - After  ; model.add(layers.Conv2D(128, (5, 5), activation='relu'))
 
 ## Results of score
 - 00, epochs=20 ; 0.99092
@@ -77,3 +82,6 @@ epochs are set to 100.
 ## 03 ; Learning Rate reducing + Dropout
 ![graphs of accuracy and loss](./03/CNN1l_03.svg)
 - val_loss is smaller than that of 01.
+
+### 04 ; Changing 2nd Conv2D layer
+![graphs of accuracy and loss](./04/CNN1l_04.svg)
