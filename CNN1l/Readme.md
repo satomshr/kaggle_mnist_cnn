@@ -147,3 +147,5 @@ dropout_2 (Dropout)          (None, 4, 4, 256)         0
 
 ### 06 ; earning Rate reducing + Dropout + dobble channels of Conv2D
 ![graphs of accuracy and loss](./06/CNN1l_06.svg)
+- Seems good
+- val_loss is lower and val_accuracy is higher than those of 03.
