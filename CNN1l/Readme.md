@@ -14,7 +14,7 @@
 | 00  | 32 | default  | No | No | 0.03399 (epochs=20) | 0.99298 (epochs=34) | 0.99092 (epochs=20)|
 | 01  | 32 | reducing  | No | No | 0.02485 (epochs=47) | 0.99417 (epochs=47) | 0.99389 (epochs=47)|
 | 02  | 32 | reducing (initial=0.004257)| No | No | 0.04623 (epochs=68) | 0.98798 (epochs=68) | |
-| 03  | 32 | reducing | No | Yes (0.4) | 0.02212 (epochs=79)| 0.99476 (epochs=75) | |
+| 03  | 32 | reducing | No | Yes (0.4) | 0.02212 (epochs=79)| 0.99476 (epochs=75) | ***0.99450*** (epochs=63)|
 
 
 ### 00 ; standard condition
@@ -51,6 +51,11 @@ epochs are set to 100.
 ## Results of score
 - 00, epochs=20 ; 0.99092
 - 01, epochs=47 ; 0.99389
+- 03
+  - epochs=79 ; 0.99392
+  - epochs=63 ; 0.99450
+  - epochs=50 ; 0.99410
+  - epochs=43 ; 0.99392
 
 ## Files
 
