@@ -19,7 +19,7 @@ The next strategy is also to increase complexity of CNN. Until now, Dense layer 
 ### Training conditions
 | No| Dense layer | Dropout (*) | BatchNormalization (*) | Min of val_loss | Max of val_accuracy | Score |
 |:-:| :-: | :-: | :-: | :-: | :-: | :-: |
-| 00| 1024 - 256 - 10 | No | No | | | |
+| 00| 1024 - 256 - 10 | No | No |0.02277 (epochs=74) |0.99500 (epochs=76) | |
 
 (*) in Dense layers
 
@@ -30,5 +30,8 @@ Standard condition of CNN1m. Dense(1028) is added.
 ## Results
 
 ## Graphs
+### Reference (CNN1l/06)
+![graphs of accuracy and loss](../CNN1l/06/CNN1l_06.svg)
+
 ### 00 (Standard condition)
 ![graphs of accuracy and loss](./00/CNN1m_00.svg)
