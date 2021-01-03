@@ -19,7 +19,7 @@
 | 05  | 32 | reducing | No | Yes (0.7) | 0.10244 (epochs=62)| 0.99167 (epochs=33) | |
 | 06  | 32 | reducing | No | Yes (0.4) | 0.02138 (epochs=65)| 0.99512 (epochs=68) | ***0.99507*** (epochs=62)|
 | 07  | 32 | reducing | No | Yes (0.4) | 0.02393 (epochs=75)|0.99429 (epochs=44) | 0.99407 (epochs=75)|
-| 08  | 32 | reducing | No | Yes (0.4) | | | |
+| 08  | 32 | reducing | No | Yes (0.4) | 0.02300 (epochs=75)|0.99452 (epochs=53) | |
 
 
 ### 00 ; standard condition
@@ -226,3 +226,4 @@ datagen = ImageDataGenerator(rotation_range=35,
 
 ### 08 ; change parameters of ImageDataGenerator
 ![graphs of accuracy and loss](./08/CNN1l_08.svg)
+- Comparing to 07, accuracy and loss is worse, but val_accuracy and val_loss are the same
