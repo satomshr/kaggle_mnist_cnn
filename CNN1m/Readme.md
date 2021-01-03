@@ -35,3 +35,4 @@ Standard condition of CNN1m. Dense(1028) is added.
 
 ### 00 (Standard condition)
 ![graphs of accuracy and loss](./00/CNN1m_00.svg)
+Comparing to CNN1l/06, val_accuracy and val_loss are almost same, but accuracy and loss seem worse.
