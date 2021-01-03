@@ -7,7 +7,7 @@ In the CNN1l, best conditions (06) are as follows;
 - Use dropout (0.4) after each Cond2D
 - Channels are doubled in each Cond2D
 
-The next strategy is also to increase complexity of CNN. Here, I will change Dense layer to get higher accuracy.
+The next strategy is also to increase complexity of CNN. Until now, Dense layer is same. Here, I will change Dense layer to get higher accuracy.
 
 ## Training conditions and Result of score
 ### Common conditions
@@ -16,9 +16,19 @@ The next strategy is also to increase complexity of CNN. Here, I will change Den
 - Dropout after Cond2D ; Yes (0.4)
 - BatchNormalization after Cond2D ; No
 
-
+### Training conditions
 | No| Dense layer | Dropout (*) | BatchNormalization (*) | Min of val_loss | Max of val_accuracy | Score |
 |:-:| :-: | :-: | :-: | :-: | :-: | :-: |
 | 00| 1024 - 256 - 10 | No | No | | | |
 
 (*) in Dense layers
+
+## Detail
+### 00
+Standard condition of CNN1m. Dense(1028) is added.
+
+## Results
+
+## Graphs
+### 00 (Standard condition)
+![graphs of accuracy and loss](./00/CNN1m_00.svg)
