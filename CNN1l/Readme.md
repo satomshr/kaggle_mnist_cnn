@@ -59,7 +59,7 @@ epochs are set to 100.
 ### 05 ; Learning Rate reducing + Dropout
 - Based on 03, set Dropout(0.7) instead of Dropout(0.4)
 
-### 06 ; Learning Rate reducing + Dropout + dobble channels of Conv2D
+### 06 ; Learning Rate reducing + Dropout + dobble channels of Conv2D (Saved as Version 14 on Kaggle)
 - Based on 03, channels of Conv2D are doubled
 #### Before
 ```
