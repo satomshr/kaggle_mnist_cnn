@@ -17,8 +17,8 @@
 | 03  | 32 | reducing | No | Yes (0.4) | 0.02212 (epochs=79)| 0.99476 (epochs=75) | ***0.99450*** (epochs=63)|
 | 04  | 32 | reducing | No | Yes (0.4) | 0.02218 (epochs=55)| 0.99452 (epochs=73) | 0.99407 (epochs=55)|
 | 05  | 32 | reducing | No | Yes (0.7) | 0.10244 (epochs=62)| 0.99167 (epochs=33) | |
-| 06  | 32 | reducing | No | Yes (0.4) | 0.02138 (epochs=65)| 0.99512 (epochs=68) | ***0.99492*** (epochs=65)|
-| 07  | 32 | reducing | No | Yes (0.4) | 0.02393 (epochs=75)|0.99429 (epochs=44) | |
+| 06  | 32 | reducing | No | Yes (0.4) | 0.02138 (epochs=65)| 0.99512 (epochs=68) | ***0.99507*** (epochs=62)|
+| 07  | 32 | reducing | No | Yes (0.4) | 0.02393 (epochs=75)|0.99429 (epochs=44) | 0.99407 (epochs=75)|
 
 
 ### 00 ; standard condition
@@ -152,6 +152,10 @@ _________________________________________________________________
   - epochs=41 ; 0.99382
 - 06
   - epochs=65 ; 0.99492 (271 / 2053 = 0.1320)
+  - epochs=62 ; 0.99507 (260 / 2069 = 0.1257)
+- 07
+  - epochs=75 ; 0.99407
+  - epochs=43 ; 0.99403
 
 ## Files
 
