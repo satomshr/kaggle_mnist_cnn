@@ -19,13 +19,14 @@
 | 05  | 32 | reducing | No | Yes (0.7) | 0.10244 (epochs=62)| 0.99167 (epochs=33) | |
 | 06  | 32 | reducing | No | Yes (0.4) | 0.02138 (epochs=65)| 0.99512 (epochs=68) | ***0.99507*** (epochs=62)|
 | 07  | 32 | reducing | No | Yes (0.4) | 0.02393 (epochs=75)|0.99429 (epochs=44) | 0.99407 (epochs=75)|
+| 08  | 32 | reducing | No | Yes (0.4) | | | |
 
 
 ### 00 ; standard condition
 Standard condition of CNN1l.
 
 ### 01 ; Learning Rate reducing
-```keras.callbacks.ReduceLROnPlateau``` is used to reduce learning rate. Parameters are as follow.
+`keras.callbacks.ReduceLROnPlateau` is used to reduce learning rate. Parameters are as follow.
 
 - monitor='val_loss'
 - factor=0.47
@@ -40,7 +41,7 @@ epochs are set to 100.
 - Initial learning rate ; 0.004257 (larger than default)
 - Learning rate will change 0.004257 -> 0.0020 -> 0.00094 -> 0.00044 -> 0.00020 -> 0.000098 -> 0.000005
 
-- Parameters of ```keras.callbacks.ReduceLROnPlateau``` are
+- Parameters of `keras.callbacks.ReduceLROnPlateau` are
   - monitor='val_loss',
   - factor=0.47,
   - patience=5,
@@ -139,6 +140,29 @@ Non-trainable params: 0
 _________________________________________________________________
 ```
 
+### 08 ; change parameters of ImageDataGenerator
+- Based on 07; parameters of ImageDataGenerator are changed
+
+#### Before
+```
+datagen = ImageDataGenerator(rotation_range=30,
+                             width_shift_range=0.20,
+                             height_shift_range=0.20,
+                             shear_range=0.2,
+                             zoom_range=0.2,
+                             fill_mode='nearest')
+```
+
+#### After
+```
+datagen = ImageDataGenerator(rotation_range=35,
+                             width_shift_range=0.25,
+                             height_shift_range=0.20,
+                             shear_range=2,
+                             zoom_range=0.2,
+                             fill_mode='nearest')
+```
+
 ## Results of score
 - 00, epochs=20 ; 0.99092
 - 01, epochs=47 ; 0.99389
@@ -198,3 +222,7 @@ _________________________________________________________________
 ![graphs of accuracy and loss](./07/CNN1l_07.svg)
 
 - loss and accuracy are better than 06, but val_loss and val_accuracy are seems same as those of 06.
+- I think, this CNN can be trained more than 06, but cannot predict test data due to variation of train date is not enough. So parameters of ImageDataGenerator should be changed (?)
+
+### 08 ; change parameters of ImageDataGenerator
+![graphs of accuracy and loss](./08/CNN1l_08.svg)
