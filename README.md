@@ -124,6 +124,9 @@ _________________________________________________________________
 - See [CNN1m/Readme.md](./CNN1m/Readme.md)
 - In order to increase parameters, Dense layer is changed
 
+- qiita
+- See [qiita/Readme.md](./qiita/Readme.md)
+- Documents, scripts, and images for article in Qiita
 
 - misc
   - check_prediction1.py ; chech prediction and see images
