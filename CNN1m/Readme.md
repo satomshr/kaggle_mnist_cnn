@@ -21,7 +21,8 @@ The next strategy is also to increase complexity of CNN. Until now, Dense layer 
 |:-:| :-: | :-: | :-: | :-: | :-: | :-: |
 | 00| 1024 - 256 - 10 | No | No |0.02277 (epochs=74) |0.99500 (epochs=76) | |
 | 01| 1024 - 256 - 10 | Yes(0.4) | No |0.02744 (epochs=74) | 0.99476 (epochs=57) | |
-| 02| 512 - 10 |        No | No |  |  |  |
+| 02| 512 - 10 |        No | No |0.02234 (epochs=48)  |0.99500 (epochs=38)  |  |
+| 03| 256 - 10 | Yes(0.4) | No | | | |
 
 (*) in Dense layers
 
@@ -34,6 +35,10 @@ Dropout(0.4) added after Dense(1024).
 
 ### 02 ; Standard condition (2)
 In 00, Dense(1024) is removed. Instead, the 1st Dense layer is changed from 256 to 512.
+
+### 03 ; Dropout(0.4) after Dense(256)
+In 00, Dense(1024) is removed. And, Dropout(0.4) is added after Dense(256)
+
 
 ## Results
 
