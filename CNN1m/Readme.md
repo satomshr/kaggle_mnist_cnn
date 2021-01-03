@@ -50,4 +50,4 @@ Comparing to CNN1l/06, val_accuracy and val_loss are almost same, but accuracy a
 Worse than 00.
 
 ### 02 ; Standard condition (2)
-[graphs of accuracy and loss](./02/CNN1m_02.svg)
+![graphs of accuracy and loss](./02/CNN1m_02.svg)
