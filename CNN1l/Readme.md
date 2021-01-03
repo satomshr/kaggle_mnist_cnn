@@ -192,3 +192,5 @@ _________________________________________________________________
 
 ### 07 ; again double channels of Conv2D
 ![graphs of accuracy and loss](./07/CNN1l_07.svg)
+
+- loss and accuracy are better than 06, but val_loss and val_accuracy are seems same as those of 06.
