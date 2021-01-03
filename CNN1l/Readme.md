@@ -17,7 +17,7 @@
 | 03  | 32 | reducing | No | Yes (0.4) | 0.02212 (epochs=79)| 0.99476 (epochs=75) | ***0.99450*** (epochs=63)|
 | 04  | 32 | reducing | No | Yes (0.4) | 0.02218 (epochs=55)| 0.99452 (epochs=73) | 0.99407 (epochs=55)|
 | 05  | 32 | reducing | No | Yes (0.7) | 0.10244 (epochs=62)| 0.99167 (epochs=33) | |
-| 06  | 32 | reducing | No | Yes (0.4) | 0.02138 (epochs=65)| 0.99512 (epochs=68) | |
+| 06  | 32 | reducing | No | Yes (0.4) | 0.02138 (epochs=65)| 0.99512 (epochs=68) | 0.99492 (epochs=65)|
 
 
 ### 00 ; standard condition
@@ -112,6 +112,9 @@ dropout_2 (Dropout)          (None, 4, 4, 256)         0
   - epochs=43 ; 0.99392
 - 04
   - epochs=55 ; 0.99407
+  - epochs=41 ; 0.99382
+- 06
+  - epochs=65 ; 0.99492 (271 / 2053 = 0.1320)
 
 ## Files
 
