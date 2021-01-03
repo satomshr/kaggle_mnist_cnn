@@ -120,12 +120,10 @@ _________________________________________________________________
   - See [CNN1l/Readme.md](./CNN1l/Readme.md)
   - In order to increase parameters, the 1st Conv2D is changed ((5,5) -> (7,7))
 
-- CNN2a
-  - Files
-  - Summary
-    - LeNet-5 をトライ
-    - http://datahacker.rs/lenet-5-implementation-tensorflow-2-0/
-    - https://ohke.hateblo.jp/entry/2019/03/16/143000
+- CNN1m
+- See [CNN1m/Readme.md](./CNN1m/Readme.md)
+- In order to increase parameters, Dense layer is changed
+
 
 - misc
   - check_prediction1.py ; chech prediction and see images
