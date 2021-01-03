@@ -58,6 +58,8 @@ Worse than 00.
 ![graphs of accuracy and loss](./02/CNN1m_02.svg)
 Similar to CNN1l/06.
 
+Doesn't this network have enough information to toransmit afterwards?
+
 
 ### 03 ; Dropout(0.4) before Dense(256)
 ![graphs of accuracy and loss](./03/CNN1m_03.svg)
