@@ -242,4 +242,4 @@ datagen = ImageDataGenerator(rotation_range=35,
 - Seems same as 08
 
 ### 10 ; same as 07, but no validation_data
-![graphs of accuracy and loss](./09/CNN1l_09.svg)
+![graphs of accuracy and loss](./10/CNN1l_10.svg)
