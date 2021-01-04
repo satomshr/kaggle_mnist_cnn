@@ -16,4 +16,5 @@ Documents, script, images for articles in [Qiita](https://qiita.com/)
 - prediction1.png ; matched data with high probability
 - prediction2.png ; matched data with low probability
 - prediction3.png ; unmatched data
+- check_prediction1.py ; sample script to see the results of prediction
 - digit-recognition_CNN1g.py ; sample script
