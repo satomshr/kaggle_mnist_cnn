@@ -18,12 +18,15 @@ Here, based on the condition of CNN1l/06, try various method.
 |:-:| :-- | :-: | :-: | :-: |
 |Ref| CNN1l/06 | 0.02138 (epochs=65)| 0.99512 (epochs=68) | 0.99507 (epochs=62)|
 | 00| factor = 0.631 |0.02099 (epochs=61) |0.99595 (epochs=65) | 0.99475 (epochs=61)|
+| 01| 00 + doubled channels| | | |
 
 
 ## Detail
 ### 00 ; learning rate reducing factor ; 0.47 -> 0.631
 Factor of learning rate reducing is changed from 0.47 to 0.631
 
+### 01 ; 00 + doubled channels of Conv2D (as in CNN1l/07)
+Base is CNN1n/00 above, and channels of Cond2D are doubled (256 - 1024 - 1024).
 
 ## Results
 
@@ -34,3 +37,6 @@ Factor of learning rate reducing is changed from 0.47 to 0.631
 ### 00 ; learning rate reducing factor ; 0.47 -> 0.631
 ![graphs of accuracy and loss](./00/CNN1n_00.svg)
 - Slightly improved comparing to CNN1l/06.
+
+### 01 ; 00 + doubled channels of Conv2D (as in CNN1l/07)
+![graphs of accuracy and loss](./01/CNN1n_01.svg)
