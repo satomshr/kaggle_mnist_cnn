@@ -38,5 +38,8 @@ Base is CNN1n/00 above, and channels of Cond2D are doubled (256 - 1024 - 1024).
 ![graphs of accuracy and loss](./00/CNN1n_00.svg)
 - Slightly improved comparing to CNN1l/06.
 
+### Reference (CNN1l/07)
+![graphs of accuracy and loss](../CNN1l/07/CNN1l_07.svg)
+
 ### 01 ; 00 + doubled channels of Conv2D (as in CNN1l/07)
 ![graphs of accuracy and loss](./01/CNN1n_01.svg)
