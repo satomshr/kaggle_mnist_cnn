@@ -25,7 +25,7 @@ for dirname, _, filenames in os.walk('/kaggle/input'):
     for filename in filenames:
         print(os.path.join(dirname, filename))
 
-# You can write up to 20GB to the current directory (/kaggle/working/) that gets preserved as output when you create a version using "Save & Run All" 
+# You can write up to 20GB to the current directory (/kaggle/working/) that gets preserved as output when you create a version using "Save & Run All"
 # You can also write temporary files to /kaggle/temp/, but they won't be saved outside of the current session
 
 
@@ -102,7 +102,7 @@ for i in range(25):
     plt.subplot(5, 5, i+1)
     plt.imshow(array_to_img(datagen.random_transform(train_data_x[i])), cmap='gray')
     plt.axis('off')
-    
+
 plt.show()
 
 
@@ -188,7 +188,7 @@ model_checkpoint_callback = ModelCheckpoint(filepath=os.path.join(model_dir, "mo
 # In[16]:
 
 
-# history = model.fit(train_data_x, train_data_y, 
+# history = model.fit(train_data_x, train_data_y,
 #                     validation_split=0.2,
 #                     epochs=20,
 #                     callbacks=[model_checkpoint_callback])
@@ -350,18 +350,18 @@ postfix = "CNN1g"
 for dirname, _, filenames in os.walk(model_dir):
     for filename in filenames:
         model.load_weights(os.path.join(dirname, filename))
-        
+
         # get epochs number and create file name
         ep = re.search(r'\d+', filename).group()
         csv_file = "digit_recognizer_" + postfix + "_epochs" + ep + ".csv"
         pred_file = "prediction_" + postfix + "_epochs" + ep + ".csv"
         print("epochs=" + ep)
-        
+
         # prediction
         prediction = model.predict_classes(test_data, verbose=0)
         output = pd.DataFrame({"ImageId" : np.arange(1, 28000+1), "Label":prediction})
         output.to_csv(os.path.join(data_dir, csv_file), index=False)
-        
+
         # probability
         pred = model.predict_classes(train_data_x, verbose=0)
         pred_proba = model.predict_proba(train_data_x, verbose=0)
@@ -371,7 +371,7 @@ for dirname, _, filenames in os.walk(model_dir):
 
         output = pd.concat([pred_df, pred_proba_df], axis=1)
         output.to_csv(os.path.join(data_dir, pred_file), index=False)
-        
+
 print("Your submission was successfully saved!")
 
 
@@ -402,4 +402,3 @@ print("Your submission was successfully saved!")
 
 # output.to_csv("prediction_CNN1g_epochs{}.csv".format(ep), index=False)
 # print("Your prediction was successfully saved!")
-
