@@ -16,7 +16,7 @@ Here, based on the condition of CNN1l/06, try various method.
 ### Training conditions
 | No| Conditions | Min of val_loss | Max of val_accuracy | Score |
 |:-:| :-- | :-: | :-: | :-: |
-| 00| factor = 0.631 | | |
+| 00| factor = 0.631 |0.02099 (epochs=61) |0.99595 (epochs=65) | |
 
 
 ## Detail
