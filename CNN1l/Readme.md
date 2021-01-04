@@ -21,7 +21,7 @@
 | 07  | 32 | reducing | No | Yes (0.4) | 0.02393 (epochs=75)|0.99429 (epochs=44) | 0.99407 (epochs=75)|
 | 08  | 32 | reducing | No | Yes (0.4) | 0.02300 (epochs=75)|0.99452 (epochs=53) | |
 | 09  | 32 | reducing | No | Yes (0.4) | 0.02332 (epochs=80)|0.99452 (epochs=74) | |
-
+| 10  | 32 | reducing | No | Yes (0.4) |  |  | 0.99432 (epochs=73) |
 
 ### 00 ; standard condition
 Standard condition of CNN1l.
@@ -166,6 +166,8 @@ datagen = ImageDataGenerator(rotation_range=35,
 ### 09 ; changer filter of the 1st Cond2D
 - Based on 07, filter of the 1st Cond2D is changed from (7,7) to (9,9)
 
+### 10 ; same as 07, but no validation_data
+- Based on 07, trained with no varlidation data. All data are used as train data.
 
 ## Results of score
 - 00, epochs=20 ; 0.99092
@@ -184,6 +186,8 @@ datagen = ImageDataGenerator(rotation_range=35,
 - 07
   - epochs=75 ; 0.99407
   - epochs=43 ; 0.99403
+- 10
+  - epochs=73 ; 0.99432
 
 ## Files
 
@@ -236,3 +240,6 @@ datagen = ImageDataGenerator(rotation_range=35,
 ![graphs of accuracy and loss](./09/CNN1l_09.svg)
 - Comparing to 07, accuracy and loss is worse, but val_accuracy and val_loss are the same
 - Seems same as 08
+
+### 10 ; same as 07, but no validation_data
+![graphs of accuracy and loss](./09/CNN1l_09.svg)
