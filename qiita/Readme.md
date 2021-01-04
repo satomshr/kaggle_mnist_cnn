@@ -11,3 +11,9 @@ Documents, script, images for articles in [Qiita](https://qiita.com/)
 - digit-recognition_CNN1e_2.py ; prediction
 - train_CNN1e.png ; graphs of accuracy and val_accuracy
 - train_CNN1e.txt ; log of fitting
+
+## 03
+- prediction1.png ; matched data with high probability
+- prediction2.png ; matched data with low probability
+- prediction3.png ; unmatched data
+- digit-recognition_CNN1g.py ; sample script
