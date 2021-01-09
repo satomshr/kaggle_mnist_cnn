@@ -17,13 +17,20 @@ Here, based on the condition of CNN1l/06, try "test time augumentation".
 | No| Conditions | Min of val_loss | Max of val_accuracy | Score |
 |:-:| :-- | :-: | :-: | :-: |
 |Ref| CNN1l/06 | 0.02138 (epochs=65)| 0.99512 (epochs=68) | 0.99507 (epochs=62)|
-| 00| TTA (epochs=5) | | | |
+| 00| TTA (epochs=5) | 0.02195 (epochs=64) |0.99512 (epochs=66) | 0.99467 (TTA) |
+| 01| TTA (epochs=5) | 0.02154 (epochs=60) |0.99512 (epochs=58)| **0.99532** (epochs=60) |
+
 
 
 ## Detail
-### 00 ; Test Time Augumentation (epochs=5)
+### 00 ; Test Time Augumentation (epochs=5), Saved as Ver.15 on Kaggle
 - Test time augumentation is used. Epochs = 5.
 - Accuracy score of train data: 0.9972380952380953
+
+### 01 ; Test Time Augumentation (epochs=5), filters=256
+- filters=256
+- Accuracy score of train data: 0.9973095238095238
+
 
 ## Results
 - 00
@@ -31,7 +38,16 @@ Here, based on the condition of CNN1l/06, try "test time augumentation".
   - epochs=64 ; 0.99407
   - epochs=59 ; 0.99425
   - not better than CNN1l/06
+- 01
+  - digit-recognizer_CNN1o_tta.csv ; 0.99500
+  - epochs=60 ; 0.99532 (257 / 2254 = 0.1140)
 
 ## Graphs
 ### Reference (CNN1l/06)
 ![graphs of accuracy and loss](../CNN1l/06/CNN1l_06.svg)
+
+### 00 ; Test Time Augumentation (epochs=5)
+![graphs of accuracy and loss](../CNN1o/00/CNN1o_00.svg)
+
+### 01 ; Test Time Augumentation (epochs=5), filters=256
+![graphs of accuracy and loss](../CNN1o/01/CNN1o_01.svg)
