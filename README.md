@@ -121,12 +121,20 @@ _________________________________________________________________
   - In order to increase parameters, the 1st Conv2D is changed ((5,5) -> (7,7))
 
 - CNN1m
-- See [CNN1m/Readme.md](./CNN1m/Readme.md)
-- In order to increase parameters, Dense layer is changed
+  - See [CNN1m/Readme.md](./CNN1m/Readme.md)
+  - In order to increase parameters, Dense layer is changed
+
+- CNN1n
+  - See [CNN1n/Readme.md](./CNN1n/Readme.md)
+  - Based on CNN1l/06, try various methods (in fail)
+
+- CNN1o
+  - See [CNN1o/Readme.md](./CNN1o/Readme.md)
+  - Based on CNN1l/06, test time augumentation tried.
 
 - qiita
-- See [qiita/Readme.md](./qiita/Readme.md)
-- Documents, scripts, and images for article in Qiita
+  - See [qiita/Readme.md](./qiita/Readme.md)
+  - Documents, scripts, and images for article in Qiita
 
 - misc
   - check_prediction1.py ; chech prediction and see images
