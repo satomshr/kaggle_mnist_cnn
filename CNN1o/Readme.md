@@ -19,6 +19,7 @@ Here, based on the condition of CNN1l/06, try "test time augumentation".
 |Ref| CNN1l/06 | 0.02138 (epochs=65)| 0.99512 (epochs=68) | 0.99507 (epochs=62)|
 | 00| TTA (epochs=5) | 0.02195 (epochs=64) |0.99512 (epochs=66) | 0.99467 (TTA) |
 | 01| TTA (epochs=5) | 0.02154 (epochs=60) |0.99512 (epochs=58)| **0.99532** (epochs=60) |
+| 02| filters=512 |  | |  |
 
 
 
@@ -31,6 +32,10 @@ Here, based on the condition of CNN1l/06, try "test time augumentation".
 - filters=256
 - Accuracy score of train data: 0.9973095238095238
 
+### 02 ; filters=512
+- TTA is not used
+- filters=512
+- Accuracy score of train data: 0.9973095238095238
 
 ## Results
 - 00
@@ -51,3 +56,6 @@ Here, based on the condition of CNN1l/06, try "test time augumentation".
 
 ### 01 ; Test Time Augumentation (epochs=5), filters=256
 ![graphs of accuracy and loss](../CNN1o/01/CNN1o_01.svg)
+
+### 02 ; filters=512
+![graphs of accuracy and loss](../CNN1o/02/CNN1o_02.svg)
