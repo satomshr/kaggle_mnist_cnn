@@ -18,8 +18,8 @@ Here, based on the condition of CNN1l/06, try "test time augumentation".
 |:-:| :-- | :-: | :-: | :-: |
 |Ref| CNN1l/06 | 0.02138 (epochs=65)| 0.99512 (epochs=68) | 0.99507 (epochs=62)|
 | 00| TTA (epochs=5) | 0.02195 (epochs=64) |0.99512 (epochs=66) | 0.99467 (TTA) |
-| 01| TTA (epochs=5) | 0.02154 (epochs=60) |0.99512 (epochs=58)| **0.99532** (epochs=60) |
-| 02| filters=512 |  | |  |
+| 01| TTA (epochs=5) | 0.02154 (epochs=60) |0.99512 (epochs=58) | **0.99532** (epochs=60) |
+| 02| filters=512    | 0.02273 (epochs=70) |0.99476 (epochs=57) | 0.99478 (epochs=70) |
 
 
 
@@ -46,6 +46,9 @@ Here, based on the condition of CNN1l/06, try "test time augumentation".
 - 01
   - digit-recognizer_CNN1o_tta.csv ; 0.99500
   - epochs=60 ; 0.99532 (257 / 2254 = 0.1140)
+- 02
+  - epochs=70 ; 0.99478
+  - epochs=69 ; 0.99460
 
 ## Graphs
 ### Reference (CNN1l/06)
