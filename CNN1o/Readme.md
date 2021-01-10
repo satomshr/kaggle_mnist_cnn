@@ -59,6 +59,8 @@ Here, based on the condition of CNN1l/06, try "test time augumentation".
 
 ### 01 ; Test Time Augumentation (epochs=5), filters=256
 ![graphs of accuracy and loss](../CNN1o/01/CNN1o_01.svg)
+- Prediction **without** TTA is better than Reference.
 
 ### 02 ; filters=512
 ![graphs of accuracy and loss](../CNN1o/02/CNN1o_02.svg)
+- not so good
