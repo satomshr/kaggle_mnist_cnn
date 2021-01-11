@@ -13,6 +13,9 @@
 ## Detail
 ### 00 ; n_layers=2, filters=128
 
+### 01 ; n_laysers=2, filters=128 (Same as 00)
+- Same condition as 00, but watch `loss` to save data.
+
 ## Results
 - 00
   - epochs=30 ; 0.99435
@@ -24,3 +27,7 @@
 ### 00 ; n_laysers=2, filters=128
 ![graphs of accuracy and loss](../CNN1q/00/CNN1q_00.svg)
 - `val_loss` is not stable. So it seems better to check `loss` instead of `val_loss`.
+
+### 01 ; n_laysers=2, filters=128 (Same as 00)
+![graphs of accuracy and loss](../CNN1q/01/CNN1q_01.svg)
+- When epochs > 40, seems over-fit.
