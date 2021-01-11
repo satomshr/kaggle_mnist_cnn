@@ -17,12 +17,16 @@
 ### 01 ; n_laysers=2, filters=128 (Same as 00)
 - Same condition as 00, but watch `loss` to save data.
 
+### 02 ; condition is same as 01 + ensamble training (epochs=5)
+- Same condition as 01, and ensamble training is used.
+
 ## Results
 - 00
   - epochs=30 ; 0.99435
 - 01
   - epochs=46 ; 0.99285
 - 02
+  - soft ensamble ; 0.99510
 
 ## graphs
 ### Ref ; filters=256
