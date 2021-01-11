@@ -132,6 +132,14 @@ _________________________________________________________________
   - See [CNN1o/Readme.md](./CNN1o/Readme.md)
   - Based on CNN1l/06, test time augumentation tried.
 
+- CNN1p
+  - See [CNN1p/Readme.md](./CNN1p/Readme.md)
+  - Base on CNN1l/07, soft and hard ensamble training tried.
+
+- CNN1q
+  - See [CNN1q/Readme.md](./CNN1q/Readme.md)
+  - VGG16-like deep models are tried.
+
 - qiita
   - See [qiita/Readme.md](./qiita/Readme.md)
   - Documents, scripts, and images for article in Qiita
