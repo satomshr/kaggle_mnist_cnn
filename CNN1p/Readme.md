@@ -20,6 +20,7 @@ In CNN1o, No.01 was the best. Based on it, ensemble training is tried to get hig
   - soft emsamble = 0.99553 (245 / 2583 = 0.09485)
   - hard emsamble = 0.99528
 
+## Graphs
 ### Ref ; filters=256
 ![graphs of accuracy and loss](../CNN1o/01/CNN1o_01.svg)
 
