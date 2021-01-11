@@ -17,7 +17,7 @@ In CNN1o, No.01 was the best. Based on it, ensemble training is tried to get hig
 
 ## Results
 - 00
-  - soft emsamble = 0.99553
+  - soft emsamble = 0.99553 (245 / 2583 = 0.09485)
   - hard emsamble = 0.99528
 
 ### Ref ; filters=256
