@@ -9,6 +9,7 @@
 | Ref | filters=256 | 0.02154 (epochs=60) |0.99512 (epochs=58) | 0.99532 (epochs=60) |
 | Ref | CNN1p/00    |                     |                    | **0.99553** (soft)  |
 | 00  | n_layers=2, filters=128 |                     |                    | 0.99435 (epochs=30)|
+| 01  | n_layers=2, filters=128 | 0.02382 (epochs=46) | 0.99488 (epochs=38)| 0.99285 (epochs=46)|
 
 ## Detail
 ### 00 ; n_layers=2, filters=128
@@ -19,6 +20,9 @@
 ## Results
 - 00
   - epochs=30 ; 0.99435
+- 01
+  - epochs=46 ; 0.99285
+- 02
 
 ## graphs
 ### Ref ; filters=256
