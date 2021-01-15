@@ -17,7 +17,7 @@
 ### 01 ; n_laysers=2, filters=128 (Same as 00)
 - Same condition as 00, but watch `loss` to save data.
 
-### 02 ; condition is same as 01 + ensamble training (epochs=5)
+### 02 ; condition is same as 01 + ensamble training (epochs=5), saved as Ver.17 on Kaggle
 - Same condition as 01, and ensamble training is used.
 
 ## Results
