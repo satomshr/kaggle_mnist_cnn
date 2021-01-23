@@ -75,6 +75,18 @@ Freeze = layer1 とし, epochs=150 で計算. epochs=100 くらいで改善が�
 ### まとめ
 転移学習は, Freeze = layer1 とし, epochs = 100 とする.
 
+## 00
+### Summary
+- 通常の学習と, 確率の低い画像データを使って転移学習 (条件は上記)
+- 通常の学習と転移学習を各 5 回ずつ行い, 各結果を 0 ～ 5 個ずつ使ってアンサンブル学習
+- This script is saved as Ver.19 on kaggle.
+
+### train_data の予測結果
+![Results of ensamble training](./ensamble_results_soft.svg)
+![Results of ensamble training](./ensamble_results_hard.svg)
+
+1st training を 5 回, transfer training を 3 回使って ensamble training (soft) が一番良かった.
+
 
 ## テスト
 ### フォルダ
