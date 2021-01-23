@@ -45,6 +45,16 @@
   - 全部のテストデータに対して再予測し, 1 回目の予測結果とアンサンブル学習をする
     - 例えば最初の予測で 3 回分, 再予測で 2 回分, 合計 5 回分のデータでアンサンブルするなど, 最初の予測の重みを重めにするなど, 工夫が必要か
 
+## 再予測の条件の検討
+### 転移学習の条件と, 損失関数
+
+![Freeze=none](./freeze_none.png)
+![Freeze=layer1](./freeze_L1.png)
+![Freeze=layer1, layer2](./freeze_L1_L2.png)
+![Freeze=layer1, layer2, layer3](./freeze_L1_L2_L3.png)
+
+
+
 ## テスト
 ### フォルダ
 - [test](./test/)
