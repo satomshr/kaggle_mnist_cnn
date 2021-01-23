@@ -85,8 +85,14 @@ Freeze = layer1 とし, epochs=150 で計算. epochs=100 くらいで改善が�
 ![Results of ensamble training](./00/ensamble_results_soft.svg)
 ![Results of ensamble training](./00/ensamble_results_hard.svg)
 
-1st training を 5 回, transfer training を 3 回使って ensamble training (soft) が一番良かった.
+1st training を 5 回, transfer training を 3 回使って ensamble training (soft) が一番良かった. 次は 1st training を 5 回, transfer training を 4 回使って ensamble training (soft).
 
+### Results
+|1st training|Transfer training|Soft/Hard|Score|No|
+|:-:|:-:|:-:|:-:|:-:|
+| 5 | 3 | Soft | 0.99571 | 239 / 2950 |
+| 5 | 4 | Soft | 0.99578 | 231 / 2950 |
+| 5 | 5 | Soft | 0.99575 | |
 
 ## テスト
 ### フォルダ
