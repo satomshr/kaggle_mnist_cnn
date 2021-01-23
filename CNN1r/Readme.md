@@ -82,8 +82,8 @@ Freeze = layer1 とし, epochs=150 で計算. epochs=100 くらいで改善が�
 - This script is saved as Ver.19 on kaggle.
 
 ### train_data の予測結果
-![Results of ensamble training](./ensamble_results_soft.svg)
-![Results of ensamble training](./ensamble_results_hard.svg)
+![Results of ensamble training](./00/ensamble_results_soft.svg)
+![Results of ensamble training](./00/ensamble_results_hard.svg)
 
 1st training を 5 回, transfer training を 3 回使って ensamble training (soft) が一番良かった.
 
