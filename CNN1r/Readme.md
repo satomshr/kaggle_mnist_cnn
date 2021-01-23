@@ -48,11 +48,32 @@
 ## 再予測の条件の検討
 ### 転移学習の条件と, 損失関数
 
+#### Freeze = none
 ![Freeze=none](./freeze_none.png)
+
+#### Freeze = layer1
 ![Freeze=layer1](./freeze_L1.png)
+
+#### Freeze = layer1, layer2
 ![Freeze=layer1, layer2](./freeze_L1_L2.png)
+
+#### Freeze = layer1, layer2, layer3
 ![Freeze=layer1, layer2, layer3](./freeze_L1_L2_L3.png)
 
+#### まとめ
+- Freeze = none ; accuracy, loss が改善しすぎていて, 過学習になっている
+- Freeze = layer1 ; ちょうどいい感じ
+- Freeze = layer1, layer2 (, layer3) ; accuracy が不足. 複雑さを表現しきれていない
+
+以上から Freeze = layer1 とする.
+
+### epoch 数
+![Freeze=layer1](./freeze_L1_150.png)
+
+Freeze = layer1 とし, epochs=150 で計算. epochs=100 くらいで改善が止まっている感じ.
+
+### まとめ
+転移学習は, Freeze = layer1 とし, epochs = 100 とする.
 
 
 ## テスト
