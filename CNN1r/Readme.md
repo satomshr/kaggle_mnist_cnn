@@ -135,6 +135,13 @@ Freeze = layer1 とし, epochs=150 で計算. epochs=100 くらいで改善が�
 - 1 epoch = 20s
 - 1 条件の計算は 70 epochs = 1400s (23.34min) (本番の計算は 65 epochs にした)
 
+### Files
+- history_ImageDataGenerator.csv ; accuracy and loss of optimal condition
+- results_ImageDataGenerator.csv ; parameters of ImageDataGenerator and val_loss
+
+### 9 回繰り返した中での最適の accuracy と loss
+![accuracy and loss](./01/results_ImageDataGenerator_opt.png)
+
 
 ## テスト
 ### フォルダ
