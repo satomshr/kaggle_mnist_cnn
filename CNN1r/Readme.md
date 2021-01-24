@@ -138,6 +138,7 @@ Freeze = layer1 とし, epochs=150 で計算. epochs=100 くらいで改善が�
 ### Files
 - history_ImageDataGenerator.csv ; accuracy and loss of optimal condition
 - results_ImageDataGenerator.csv ; parameters of ImageDataGenerator and val_loss
+  - val_loss の大きい条件と小さい条件は存在するようだ
 
 ### 9 回繰り返した中での最適の accuracy と loss
 ![accuracy and loss](./01/results_ImageDataGenerator_opt.png)
