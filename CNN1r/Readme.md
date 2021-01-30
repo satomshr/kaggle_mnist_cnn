@@ -143,6 +143,14 @@ Freeze = layer1 とし, epochs=150 で計算. epochs=100 くらいで改善が�
 ### 9 回繰り返した中での最適の accuracy と loss
 ![accuracy and loss](./01/results_ImageDataGenerator_opt.png)
 
+## 02
+### Summary
+- `GPyOpt` を使って，`ImageDataGenerator` のパラメータの最適値を探す
+
+### Files
+- myBopt.csv
+  - 1 回目の最適化. `horizontal_flip` と `vertical_flip` も変数にした.
+  - 結局のところ, `horizontal_flip = False`, `vertical_flip = False` のほうが良かった
 
 ## テスト
 ### フォルダ
