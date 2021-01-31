@@ -151,6 +151,10 @@ Freeze = layer1 とし, epochs=150 で計算. epochs=100 くらいで改善が�
 - myBopt.csv
   - 1 回目の最適化. `horizontal_flip` と `vertical_flip` も変数にした.
   - 結局のところ, `horizontal_flip = False`, `vertical_flip = False` のほうが良かった
+- myBopt2.csv
+  - 2 回目の最適化. `horizontal_flip = False`, `vertical_flip = False` として合計 20 回計算
+  - 結果として, パラメータの振り幅を小さくするのが良いという, 「そう言われればそうだよね」という結果が出た。ただそれだと, 過学習か否かの判断がつかない.
+  - 過学習を防ぎつつ, `val_loss` を防ぐには, ランダムサーチにして, 損失関数を見ながら, 最適の値を探しに行くのが良いか?
 
 ## テスト
 ### フォルダ
