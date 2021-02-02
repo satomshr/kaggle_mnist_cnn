@@ -67,6 +67,8 @@
 
 以上から Freeze = layer1 とする.
 
+(後日の考察) でも, `val_loss` の値だけを素直にみると, Freeze = none のほうが `val_loss` の値が良い. Freeze しないほうが良いのかも.
+
 ### epoch 数
 ![Freeze=layer1](./freeze_L1_150.png)
 
