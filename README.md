@@ -140,9 +140,9 @@ _________________________________________________________________
   - See [CNN1q/Readme.md](./CNN1q/Readme.md)
   - VGG16-like deep models are tried.
 
-  - CNN1r
-    - See [CNN1r/Readme.md](./CNN1r/Readme.md)
-    - Try to re-train the model using image datas of low probability.
+- CNN1r
+  - See [CNN1r/Readme.md](./CNN1r/Readme.md)
+  - Try to re-train the model using image datas of low probability.
 
 - qiita
   - See [qiita/Readme.md](./qiita/Readme.md)
