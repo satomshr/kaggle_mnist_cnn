@@ -202,10 +202,10 @@ soft と hard の違いはあまりない.
 - そこで転移学習のパラメータを見直して, アンサンブル学習の精度の向上を図る
 
 ### retraining_parameter/
-- loss_layer1_32_32_5.png ; Freeze=layer1, データ数 32x32x5
-- loss_layer1_32_32_10.png ; Freeze=layer1, データ数 32x32x10
-- loss_none_32_32_5.png ; Freeze=none, データ数 32x32x5
-- loss_none_32_32_10.png ; Freeze=none, データ数 32x32x10
+- loss_layer1_32_32_5.png ; Freeze=layer1, データ数 32x5x5
+- loss_layer1_32_32_10.png ; Freeze=layer1, データ数 32x5x10
+- loss_none_32_32_5.png ; Freeze=none, データ数 32x5x5
+- loss_none_32_32_10.png ; Freeze=none, データ数 32x5x10
 
 ![./04/retraining_parameter/loss_none_32_5_5.png](./04/retraining_parameter/loss_none_32_5_5.png)
 
