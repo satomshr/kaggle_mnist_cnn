@@ -214,8 +214,8 @@ soft と hard の違いはあまりない.
 なお, 本番では転移学習では `epoch=70` とした.
 
 ### result/
-![./04/result/ensanble_results_soft.svg](./04/result/ensanble_results_soft.svg)
-![./04/result/ensanble_results_hard.svg](./04/result/ensanble_results_hard.svg)
+![./04/result/ensamble_results_soft.svg](./04/result/ensamble_results_soft.svg)
+![./04/result/ensamble_results_hard.svg](./04/result/ensamble_results_hard.svg)
 
 精度が高いのは,
 - soft ; 通常学習を 5, 転移学習を 2 or 3 (soft > hard)
