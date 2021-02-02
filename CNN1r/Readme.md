@@ -196,6 +196,39 @@ soft と hard の違いはあまりない.
 | 5 | 2 | Soft | 0.99603 |  |
 | 5 | 2 | Hard |  |  |
 
+## 04
+### Summary
+- 03 では, 転移学習の結果を入れすぎると, アンサンブル学習の結果が悪化した
+- そこで転移学習のパラメータを見直して, アンサンブル学習の精度の向上を図る
+
+### retraining_parameter/
+- loss_layer1_32_32_5.png ; Freeze=layer1, データ数 32x32x5
+- loss_layer1_32_32_10.png ; Freeze=layer1, データ数 32x32x10
+- loss_none_32_32_5.png ; Freeze=none, データ数 32x32x5
+- loss_none_32_32_10.png ; Freeze=none, データ数 32x32x10
+
+![./04/retraining_parameter/loss_none_32_5_5.png](./04/retraining_parameter/loss_none_32_5_5.png)
+
+上の結果は, Freeze=none, データ数 32x5x5 の結果である. データ数が多いほうが `val_loss` は小さくなるが, それは予想しやすいデータが多く含まれるからであって, 精度の悪いデータの割合が大きくなれば `val_loss` は大きくなる. そこで, 上記の結果を採用した.
+
+なお, 本番では転移学習では `epoch=70` とした.
+
+### result/
+![./04/result/ensanble_results_soft.svg](./04/result/ensanble_results_soft.svg)
+![./04/result/ensanble_results_hard.svg](./04/result/ensanble_results_hard.svg)
+
+精度が高いのは,
+- soft ; 通常学習を 5, 転移学習を 2 or 3 (soft > hard)
+- hard ; 通常学習を 5, 転移学習を 0
+
+### Results
+|1st training|Transfer training|Soft/Hard|Score|No|
+|:-:|:-:|:-:|:-:|:-:|
+| 5 | 1 | Soft | 0.99639 |  |
+| 5 | 2 | Soft | 0.99642 | 139 / 2248 |
+| 5 | 3 | Soft | **0.99650** | 134 / 2248 (=0.0596) |
+| 5 | 0 | Hard | 0.99614 |  |
+
 ## テスト
 ### フォルダ
 - [test](./test/)
