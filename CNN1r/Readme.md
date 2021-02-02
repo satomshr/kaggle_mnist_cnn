@@ -172,6 +172,11 @@ history 以下のファイルは, `ImageDataGenerator` のランダムサーチ�
 - shear_range = 0.37 (0.20)
 - zoom_range = 0.17 (0.20)
 
+### ImageDataGenerator のパラメータ変更後の損失関数
+![CNN1r_4.svg](./CNN1r_4.svg)
+
+`val_loss` が 0.02 を切るようになっている. (全てが 0.02 を切っているわけではないが)
+
 ### train_data の予測結果
 ![Results of ensamble training](./03/ensamble_results_soft.svg)
 ![Results of ensamble training](./03/ensamble_results_hard.svg)
