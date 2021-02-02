@@ -173,7 +173,7 @@ history 以下のファイルは, `ImageDataGenerator` のランダムサーチ�
 - zoom_range = 0.17 (0.20)
 
 ### ImageDataGenerator のパラメータ変更後の損失関数
-![CNN1r_4.svg](./CNN1r_4.svg)
+![./03/CNN1r_4.svg](./03/CNN1r_4.svg)
 
 `val_loss` が 0.02 を切るようになっている. (全てが 0.02 を切っているわけではないが)
 
