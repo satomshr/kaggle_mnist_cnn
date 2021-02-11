@@ -229,6 +229,16 @@ soft と hard の違いはあまりない.
 | 5 | 3 | Soft | **0.99650** | 134 / 2248 (=0.0596) |
 | 5 | 0 | Hard | 0.99614 |  |
 
+## 05
+### Summary
+`ImageDataGenerator` の最適値を再考する.
+
+### File
+- image_data_generator.xcf ; `ImageDataGenerator` の各パラメタの効果を確認
+- image_data_generator.png ; 上記ファイルのエクスポート
+
+上記の結果を見ると `shear_range` の値の考え方を間違えていた感じがする (**角度** を指定しなければならない)
+
 ## テスト
 ### フォルダ
 - [test](./test/)
