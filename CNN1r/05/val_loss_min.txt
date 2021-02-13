@@ -1,0 +1,6 @@
+rotation_range       ; 10
+width_shift_range    ; 0.12476082129739381
+hight_shift_range    ; 0.27554495158231596
+shear_range          ; 10
+zoom_range           ; 0.1780711622606244
+val_loss             ; 0.02022068202495575
