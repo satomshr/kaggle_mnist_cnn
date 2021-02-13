@@ -251,6 +251,9 @@ soft と hard の違いはあまりない.
 
 `rotation_range`  と `shear_range` は小さい値になっている。これらの範囲を **0 ～ 50** とかでランダムサーチしたほうが良いかもしれない.
 
+### history
+![./05/graph_min_val_loss.png](./05/graph_min_val_loss.png)
+
 ## テスト
 ### フォルダ
 - [test](./test/)
