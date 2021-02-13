@@ -239,6 +239,18 @@ soft と hard の違いはあまりない.
 
 上記の結果を見ると `shear_range` の値の考え方を間違えていた感じがする (**角度** を指定しなければならない)
 
+### Randomized search
+`shear_range` を 10 ～ 50 にして，再度ランダムサーチ。結果は以下の通り。
+
+- rotation_range       ; 10
+- width_shift_range    ; 0.12476082129739381
+- hight_shift_range    ; 0.27554495158231596
+- shear_range          ; 10
+- zoom_range           ; 0.1780711622606244
+- val_loss             ; 0.02022068202495575
+
+`rotation_range`  と `shear_range` は小さい値になっている。これらの範囲を **0 ～ 50** とかでランダムサーチしたほうが良いかもしれない.
+
 ## テスト
 ### フォルダ
 - [test](./test/)
