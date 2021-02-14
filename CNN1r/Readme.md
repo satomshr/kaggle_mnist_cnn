@@ -254,6 +254,24 @@ soft と hard の違いはあまりない.
 ### history
 ![./05/graph_min_val_loss.png](./05/graph_min_val_loss.png)
 
+## 06
+- ゼロを含む範囲で, 再度ランダムサーチ
+
+### Randomized search results
+- rotation_range       ; 3
+- width_shift_range    ; 0.18476589453870554
+- hight_shift_range    ; 0.08195407483163591
+- shear_range          ; 9
+- zoom_range           ; 0.20833999432357256
+- val_loss             ; 0.021102938801050186
+
+### history
+![./06/graph_min_val_loss.png](./06/graph_min_val_loss.png)
+
+`ImageDataGenerator` のパラメタの値が全体的に小さく, 結果として過学習になっている.
+
+`rotation_range` と `shear_range` は 0 に固定して, 他のパラメータを振ったほうが良いか?
+
 ## テスト
 ### フォルダ
 - [test](./test/)
