@@ -274,7 +274,31 @@ soft と hard の違いはあまりない.
 
 ## 07
 - `width_shift_range` と `height_shift_range` だけ変えて，グリッドサーチ。
+- rotation_range と shear_range は 5
 - 結果は，変化が一番小さいものが良かった
+  - rotation_range ; 5
+  - width_shift_range ; 0.1
+  - height_shift_range ; 0.1
+  - shear_range ; 5
+  - zoom_range ; 0.17
+  - val_loss ; 0.01939011737704277
+
+![./07/results_ImageDaaGenerator.png](./07/results_ImageDaaGenerator.png)
+
+
+## 08
+- `width_shift_range` と `height_shift_range` だけ変えて，グリッドサーチ。
+- rotation_range と shear_range は 2.5 に小さくした
+- 最適値
+  - rotation_range ; 2.5
+  - width_shift_range ; 0.2
+  - height_shift_range ; 0.1
+  - shear_range ; 2.5
+  - zoom_range ; 0.17
+  - val_loss ; 0.019082391634583473
+
+  ![./08/results_ImageDaaGenerator.png](./08/results_ImageDaaGenerator.png)
+
 
 ## テスト
 ### フォルダ
