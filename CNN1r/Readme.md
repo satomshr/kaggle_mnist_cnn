@@ -283,7 +283,7 @@ soft と hard の違いはあまりない.
   - zoom_range ; 0.17
   - val_loss ; 0.01939011737704277
 
-![./07/results_ImageDataGenerator.png](./07/results_ImageDataGenerator.png)
+![./07/history_ImageDataGenerator.png](./07/history_ImageDataGenerator.png)
 
 
 ## 08
@@ -297,7 +297,7 @@ soft と hard の違いはあまりない.
   - zoom_range ; 0.17
   - val_loss ; 0.019082391634583473
 
-  ![./08/results_ImageDataGenerator.png](./08/results_ImageDataGenerator.png)
+  ![./08/result_ImageDataGenerator.png](./08/result_ImageDataGenerator.png)
 
 
 ## テスト
