@@ -299,6 +299,9 @@ soft と hard の違いはあまりない.
 
   ![./08/result_ImageDataGenerator.png](./08/result_ImageDataGenerator.png)
 
+- 考察
+  - val_accuracy は 08 のほうが良い
+  - val_loss の定価のスピードは 07 のほうが早い。でも絶対値的には 08 のほうが僅かに良い
 
 ## テスト
 ### フォルダ
