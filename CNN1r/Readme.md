@@ -313,6 +313,8 @@ soft と hard の違いはあまりない.
 
 - low_proba_index.png ; 正解に対する確率のプロット. 42000 データ中, 41900 以上で正解がでており, 1 回目での学習精度は上がっている (ImageDataGenerator の変形を抑制しているので, 当たり前といえば当たり前)
 
+![./09/low_proba_index.png](./09/low_proba_index.png)
+
 ### 32x5x5
 - 2 回目の学習のデータ数を 32x5x5 にしたときの結果
 
