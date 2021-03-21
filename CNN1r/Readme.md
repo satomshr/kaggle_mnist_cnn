@@ -305,6 +305,12 @@ soft と hard の違いはあまりない.
 
 ## 09
 - 08 で得られたパラメータで, 学習・推定を行う
+  - rotation_range ; 2.5
+  - width_shift_range ; 0.2
+  - height_shift_range ; 0.1
+  - shear_range ; 2.5
+  - zoom_range ; 0.17
+
 - low_proba_index.png ; 正解に対する確率のプロット. 42000 データ中, 41900 以上で正解がでており, 1 回目での学習精度は上がっている (ImageDataGenerator の変形を抑制しているので, 当たり前といえば当たり前)
 
 ### 32x5x5
@@ -329,8 +335,17 @@ soft と hard の違いはあまりない.
 ![./09/32x5x2/ensamble_results_hard.svg](./09/32x5x2/ensamble_results_hard.svg)
 ![./09/32x5x2/ensamble_results_soft.svg](./09/32x5x2/ensamble_results_soft.svg)
 
-- hard ensamble ; 通常学習を 4 回, 転移学習を 2 回のときに最大 (0.999452)
+- hard ensamble ; 通常学習を 4 回, 転移学習を 1 回のときに最大 (0.999452)
 - soft ensamble ; 通常学習を 4 回, 転移学習を 2 回のときに最大 (0.999476)
+
+### Results
+|1st training|Transfer training|#data of transfer training|Soft/Hard|Score|No|
+|:-:|:-:|:-:|:-:|:-:|:-:|
+| 4 | 2 | 32x5x2 | Soft | 0.99592 | |
+| 4 | 2 | 32x5x2 | Hard | 0.99542 | |
+| 5 | 2 | 32x5x2 | Soft | 0.99617 | |
+| 5 | 2 | 32x5x5 | Soft | 0.99614 | |
+| 5 | 2 | 32x5x5 | Hard | 0.99585 | |
 
 
 ## テスト
