@@ -303,6 +303,36 @@ soft と hard の違いはあまりない.
   - val_accuracy は 08 のほうが良い
   - val_loss の低下のスピードは 07 のほうが早い。でも絶対値的には 08 のほうが僅かに良い
 
+## 09
+- 08 で得られたパラメータで, 学習・推定を行う
+- low_proba_index.png ; 正解に対する確率のプロット. 42000 データ中, 41900 以上で正解がでており, 1 回目での学習精度は上がっている (ImageDataGenerator の変形を抑制しているので, 当たり前といえば当たり前)
+
+### 32x5x5
+- 2 回目の学習のデータ数を 32x5x5 にしたときの結果
+
+#### 1 回目の学習
+![./09/32x5x5/history_CNN1r_0.svg](./09/32x5x5/history_CNN1r_0.svg)
+
+上記は 1 回目の学習時の損失関数の 1 つ. `val_loss` が 0.02 を下回っている (全てが 0.02 を下回っているわけではない)
+
+#### アンサンブル学習の結果
+![./09/32x5x5/ensamble_results_hard.svg](./09/32x5x5/ensamble_results_hard.svg)
+![./09/32x5x5/ensamble_results_soft.svg](./09/32x5x5/ensamble_results_soft.svg)
+
+- hard ensamble ; 通常学習を 5 回, 転移学習を 0 ～ 2 のときに最大 (0.999357, 転移学習の効果が出ていない)
+- soft ensamble ; 通常学習を 5 回, 転移学習を 2 回のときに最大 (0.999404, hard よりも高い)
+
+### 32x5x2
+- 2 回目の学習のデータ数を 32x5x2 にしたときの結果
+
+#### アンサンブル学習の結果
+![./09/32x5x2/ensamble_results_hard.svg](./09/32x5x2/ensamble_results_hard.svg)
+![./09/32x5x2/ensamble_results_soft.svg](./09/32x5x2/ensamble_results_soft.svg)
+
+- hard ensamble ; 通常学習を 4 回, 転移学習を 2 回のときに最大 (0.999452)
+- soft ensamble ; 通常学習を 4 回, 転移学習を 2 回のときに最大 (0.999476)
+
+
 ## テスト
 ### フォルダ
 - [test](./test/)
