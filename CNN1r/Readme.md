@@ -395,6 +395,10 @@ soft と hard の違いはあまりない.
 ![./10/32x5x1/ensamble_results_hard.svg](./10/32x5x1/ensamble_results_hard.svg)
 ![./10/32x5x1/ensamble_results_soft.svg](./10/32x5x1/ensamble_results_soft.svg)
 
+- hard ensamble ; 通常学習を 5 回, 転移学習を 0 or 1 回のときに最大 (0.999547, 転移学習の効果が出ていない)
+- soft ensamble ; 通常学習を 5 回, 転移学習を 0 or 1 回のときに最大 (0.999571, 転移学習の効果が出ていない)
+
+
 ## テスト
 ### フォルダ
 - [test](./test/)
