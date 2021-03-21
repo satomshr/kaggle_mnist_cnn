@@ -349,6 +349,51 @@ soft と hard の違いはあまりない.
 | 5 | 2 | 32x5x5 | Soft | 0.99614 | |
 | 5 | 2 | 32x5x5 | Hard | 0.99585 | |
 
+0.996 台のいい数字が出ているが, 過去を越えられない. ImageDataGenerator による変形抑制による, 過学習になているのか?
+
+## 10
+- 07 で得られたパラメータで, 学習・推定を行う
+  - rotation_range ; 5
+  - width_shift_range ; 0.1
+  - height_shift_range ; 0.1
+  - shear_range ; 5
+  - zoom_range ; 0.17
+
+  - low_proba_index.png ; 正解に対する確率のプロット. 09 よりも僅かだが正答率が上がっている
+
+  ![./10/low_proba_index.png](./10/low_proba_index.png)
+
+### 32x5x5
+- 2 回目の学習のデータ数を 32x5x5 にしたときの結果
+
+#### 1 回目の学習結果
+![./10/32x5x5/history_CNN1r_0.svg](./10/32x5x5/history_CNN1r_0.svg)
+
+1 回目の学習の損失関数の一例. `val_loss` が 0.02 を下回っている (全てで 0.02 を下回っている訳ではない)
+
+#### アンサンブル学習の結果
+![./10/32x5x5/ensamble_results_hard.svg](./10/32x5x5/ensamble_results_hard.svg)
+![./10/32x5x5/ensamble_results_soft.svg](./10/32x5x5/ensamble_results_soft.svg)
+
+- hard ensamble ; 通常学習を 5 回, 転移学習を 0 回のときに最大 (0.999666, 転移学習の効果が出ていない). 通常学習を 5 回, 転移学習 2 回もいい感じ (0.999642)
+- soft ensamble ; 通常学習を 5 回, 転移学習を 1 回のときに最大 (0.999642, hard よりも若干低い). 次点は通常学習 5 回, 転移学習 0 or 2 回 (0.999619)
+
+### 32x5x2
+- 2 回目の学習のデータ数を 32x5x2 にしたときの結果
+
+#### アンサンブル学習の結果
+![./10/32x5x2/ensamble_results_hard.svg](./10/32x5x2/ensamble_results_hard.svg)
+![./10/32x5x2/ensamble_results_soft.svg](./10/32x5x2/ensamble_results_soft.svg)
+
+- hard ensamble ; 通常学習を 5 回, 転移学習を 0 回のときに最大 (0.999666, 転移学習の効果が出ていない)
+- soft ensamble ; 通常学習を 5 回, 転移学習を 0 or 1 回のときに最大 (0.999619)
+
+### 32x5x1
+- 2 回目の学習のデータ数を 32x5x1 にしたときの結果 (アンサンブルの効果が出ていないので, データ数を減らして, 不正解のデータの割合を増やした)
+
+#### アンサンブル学習の結果
+![./10/32x5x1/ensamble_results_hard.svg](./10/32x5x1/ensamble_results_hard.svg)
+![./10/32x5x1/ensamble_results_soft.svg](./10/32x5x1/ensamble_results_soft.svg)
 
 ## テスト
 ### フォルダ
